@@ -1,6 +1,6 @@
-import {getDate , getDay , getListFood} from "./components";
+import {getDate, getDay, getListFood} from "./components";
 
-export const TableBody = ({rowHead}) => {
+export const TableBody = ({row}) => {
 
     getListFood()
     getDate()
@@ -11,18 +11,18 @@ export const TableBody = ({rowHead}) => {
 
     return (
         <tbody>
-            {data.map((item, index) => (
-                <tr key={index}>
-                    {rowHead.map((column, index2) => (
-                        <th key={index2} className={item.day === getDay() ? 'select' : null}>
-                            {column.id === 'day' ? item.week : null}
-                            {column.id === 'date' ? (item.day < 10 ? "0" + item.day : item.day)
-                                + '/' + (item.month < 10 ? "0" + item.month : item.month) : null}
-                            {column.id === 'name' ? (item.food == null ? "دلخواه" : item.food) : null}
-                        </th>
-                    ))}
-                </tr>
-            ))}
+        {data.map((item, index) => (
+            <tr key={index}>
+                {row.map((column, index2) => (
+                    <th key={index2} className={item.day === getDay() ? 'select' : null}>
+                        {column.id === 'day' ? item.week : null}
+                        {column.id === 'date' ? (item.day < 10 ? "0" + item.day : item.day)
+                            + '/' + (item.month < 10 ? "0" + item.month : item.month) : null}
+                        {column.id === 'name' ? (item.food == null ? "دلخواه" : item.food) : null}
+                    </th>
+                ))}
+            </tr>
+        ))}
         </tbody>
     )
 }

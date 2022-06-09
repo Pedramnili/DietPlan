@@ -1,12 +1,14 @@
+import {CONFIG_LOGO, CONFIG_SPLIT_SCREEN, COMPONENTS_TABLE} from "config/variables.js";
+import {Logo, Table} from "./components";
 import {SplitScreen} from "layout";
-import {Logo , Table} from "./components";
-import {COLUMNS} from "config/Variables/variables.js";
+import "./Home.component.scss";
 
 export const Home = () => {
+
     return (
-        <SplitScreen partOneW={2} partTwoW={3} fDirectionContainer={'column'} widthContainer={100} >
-            <Logo fontSize={5} children={'👩🏽‍🍳'} width={100}/>
-            <Table rowHead={COLUMNS}/>
+        <SplitScreen {...CONFIG_SPLIT_SCREEN}>
+            <Logo {...CONFIG_LOGO}/>
+            <Table {...COMPONENTS_TABLE}/>
         </SplitScreen>
     )
 }

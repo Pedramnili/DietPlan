@@ -1,8 +1,8 @@
-export const TableHead = ({rowHead}) => {
+export const TableHead = ({row}) => {
     return (
         <thead>
         <tr>
-            {rowHead.map((column, index) => (
+            {row.map((column, index) => (
                 <th key={index} className={"colorRed"}>
                     {column.label}
                 </th>

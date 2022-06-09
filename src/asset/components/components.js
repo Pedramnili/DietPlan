@@ -36,7 +36,6 @@ export const Tables = styled.table`
   border-collapse: collapse;
   height: 70vh;
   width: 100vw;
-  
 `;
 
 export const CustomTooltip = styledM(({ className, ...props }) => (

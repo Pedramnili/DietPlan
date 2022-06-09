@@ -7,9 +7,9 @@ export const SplitScreen =
          fDirectionContainer,
          heightContainer = 100,
          justifyContainer,
-         partOneW = 1,
-         partTwoW = 1,
-         widthContainer = 100,
+         partOneWeight = 1,
+         partTwoWeight = 1,
+         partOneWidth = 100,
      }) => {
 
     const [partOne, partTwo] = children
@@ -20,10 +20,10 @@ export const SplitScreen =
                    justify={justifyContainer}
                    fDirection={fDirectionContainer}
         >
-            <Pane weight={partOneW} width={widthContainer}>
+            <Pane weight={partOneWeight} width={partOneWidth}>
                 {partOne}
             </Pane>
-            <Pane weight={partTwoW}>
+            <Pane weight={partTwoWeight}>
                 {partTwo}
             </Pane>
         </Container>
