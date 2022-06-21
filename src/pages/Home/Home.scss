@@ -1,0 +1,35 @@
+.arrow {
+  color: rgba(161, 14, 75, 0.73);
+  cursor: pointer ;
+  height: 3rem;
+  transition: .4s;
+  width: 3rem;
+}
+
+.arrowDis {
+  color: rgba(221, 221, 221, 0.35);
+  cursor: pointer ;
+  height: 3rem;
+  transition: .4s;
+  width: 3rem;
+}
+
+.arrowDown {
+  color: rgba(161, 14, 75, 0.73);
+  cursor: pointer ;
+  height: 2rem;
+  width: 2rem;
+}
+
+.colorRed {
+  background-color: rgba(180, 22, 61, 0.66);
+}
+
+.select {
+  background-color: rgba(26, 25, 25, 0.45);
+  color: #fff
+}
+
+.width55 {
+  width : 55vw
+}

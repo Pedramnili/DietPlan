@@ -20,11 +20,4 @@ tr:nth-child(even) {
   background-color: rgba(221, 221, 221, 0.35);
 }
 
-.arrow {
-  color: rgba(161, 14, 75, 0.73);
-  cursor: pointer;
-  height: 3rem;
-  width: 3rem;
-}
-
 /*# sourceMappingURL=general.css.map */

@@ -1,4 +1,4 @@
-import {Tables} from "asset/components/components";
+import {Tables} from "asset/components/styleComponents";
 
 export const Table = ({componentHead , componentBody}) => {
 

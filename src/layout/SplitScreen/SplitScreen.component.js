@@ -1,4 +1,4 @@
-import {Container, Pane} from "asset/components/components";
+import {Container, Pane} from "asset/components/styleComponents";
 
 export const SplitScreen =
     ({

@@ -1,44 +1,35 @@
 import {list_food} from "api/listFood.api"
+import {randomNumber} from "functions"
 
-export function getListFood() {
+function listDiet(name) {
+
+    const list = []
+    const list_finish = []
+
+    if (name === 'HealF') {
+        list.push(list_food.filter(item => !item.health));
+    } else if (name === 'riceT') {
+        list.push(list_food.filter(item => item.rice));
+    } else if (name === 'riceF_Other_HealT') {
+        list.push(list_food.filter(item => !item.rice && item.model === "" && item.health));
+    } else if (name === 'riceF_Chi_HealT') {
+        list.push(list_food.filter(item => !item.rice && item.model === "chicken" && item.health));
+    } else if (name === 'riceF_Meat_HealT') {
+        list.push(list_food.filter(item => !item.rice && item.model === "meat" && item.health));
+    }
+
+    const numbers = randomNumber(list[0].length)
+
+    for (const elem of numbers) {
+        list_finish.push(list[0][elem].name)
+    }
+
+    return list_finish
+}
+
+(function getListFood() {
 
     const finish = [];
-
-    function listDiet(name) {
-
-        const list = []
-        const list_finish = []
-        const randomNum = []
-
-        const listDiet = list_food.map(item => item)
-
-        if (name === 'HealF') {
-            list.push(listDiet.filter(item => !item.health));
-        } else if (name === 'riceT') {
-            list.push(listDiet.filter(item => item.rice));
-        } else if (name === 'riceF_Other_HealT') {
-            list.push(listDiet.filter(item => !item.rice && item.model === "" && item.health));
-        } else if (name === 'riceF_Chi_HealT') {
-            list.push(listDiet.filter(item => !item.rice && item.model === "chicken" && item.health));
-        } else if (name === 'riceF_Meat_HealT') {
-            list.push(listDiet.filter(item => !item.rice && item.model === "meat" && item.health));
-        }
-
-        for (let i = 0; i < list[0].length; i++) {
-            const num = Math.floor(Math.random() * list[0].length);
-            if (randomNum.indexOf(num) === -1) {
-                randomNum.push(num)
-            } else {
-                i--;
-            }
-        }
-
-        for (const elem of randomNum) {
-            list_finish.push(list[0][elem].name)
-        }
-
-        return list_finish
-    }
 
     const HealF = listDiet('HealF');
     const riceT = listDiet('riceT');
@@ -46,6 +37,7 @@ export function getListFood() {
     const riceF_Chi_HealT = listDiet('riceF_Chi_HealT');
     const riceF_Meat_HealT = listDiet('riceF_Meat_HealT');
     const allRiceF = [riceF_Other_HealT, riceF_Chi_HealT, riceF_Meat_HealT];
+
 
     const list = JSON.parse(localStorage.getItem('menu'));
 
@@ -107,9 +99,7 @@ export function getListFood() {
         }
 
         localStorage.setItem('menu', JSON.stringify(finish));
-
     }
-
-}
+})();
 
 
