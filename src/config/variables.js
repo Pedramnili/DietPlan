@@ -37,3 +37,17 @@ export const STYLE_MODAL = {
     transform: 'translate(-50%, -50%)',
     width: '60vw',
 };
+
+export const STYLE_MODAL_S = {
+    bgcolor: '#ffe6e6eb',
+    borderRadius: '8px',
+    boxShadow: 24,
+    left: '50%',
+    outline: 'none',
+    p: 3,
+    position: 'absolute',
+    textAlign: 'center',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '50vw',
+};

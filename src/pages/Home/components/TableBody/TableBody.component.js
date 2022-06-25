@@ -1,8 +1,8 @@
+import {getDate} from "functions";
 import {useEffect} from 'react';
 import {useDispatch , useSelector} from "react-redux";
-import {getDate} from "functions";
-import "./functions/include/getListFood"
-import "./functions/include/getDietPlan"
+import "pages/Home/components/TableBody/functions/include/getListFood"
+import "pages/Home/components/TableBody/functions/include/getDietPlan"
 
 
 export const TableBody = ({row}) => {

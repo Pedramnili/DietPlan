@@ -7,8 +7,7 @@ import {useDispatch} from "react-redux";
 export const ArrowDown = () => {
 
     const dispatch = useDispatch();
-    let today = getDate('numeric', 'day', 1, 'fa-IR')[0].day
-
+    const today = getDate('numeric', 'day', 1, 'fa-IR')[0].day
     let data = JSON.parse(localStorage.getItem('finish'));
     data = data.slice(data.map(item => item.day).indexOf(today), (data.map(item => item.day).indexOf(today) + 7))
 

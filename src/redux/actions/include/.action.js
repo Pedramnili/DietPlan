@@ -19,6 +19,13 @@ export const arrowRight = (data) => {
     }
 };
 
+export const foodSuggestion = (data) => {
+    return {
+        type: 'FOOD_SUGGESTION',
+        payload: data
+    }
+};
+
 export const listFood = (data) => {
     return {
         type: 'GET_LIST_FOOD',
@@ -29,6 +36,13 @@ export const listFood = (data) => {
 export const modal = (data) => {
     return {
         type: 'OPEN_MODAL',
+        payload: data
+    }
+};
+
+export const modalS = (data) => {
+    return {
+        type: 'OPEN_MODAL_SUGGESTION',
         payload: data
     }
 };

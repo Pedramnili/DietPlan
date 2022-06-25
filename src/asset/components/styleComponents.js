@@ -38,6 +38,7 @@ export const CustomTooltip = styledM(({ className, ...props }) => (
 }));
 
 export const IconLogo = styled.div`
+  cursor: pointer;
   font-size: ${(props) => props.fontSize}rem;
   text-align: center;
   width: ${(props) => props.width}px;

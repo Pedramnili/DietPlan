@@ -1,1 +1,6 @@
-export {setArrowDown , setArrowLeft , setArrowRight , setListFood , setModal} from './include/.reducer.js'
+export {
+    setArrowDown, setArrowLeft, setArrowRight,
+    setFoodSuggestion,
+    setListFood,
+    setModal, setModalS
+} from './include/.reducer.js'

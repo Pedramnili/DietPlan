@@ -10,11 +10,12 @@ export const ArrowLeft = () => {
     const state = useSelector(state => state)
     let title
     let today = getDate('numeric', 'day', 1, 'fa-IR')[0].day
-
     let data = JSON.parse(localStorage.getItem('finish'));
-    data = data
-        .slice((data.map(item => item.day).indexOf(today) - 7) < 0 ? 0 : (data.map(item => item.day).indexOf(today)) - 7,
-            ((data.map(item => item.day).indexOf(today) - 7) < 0 ? 0 : (data.map(item => item.day).indexOf(today)) - 7) + 7);
+    data = data.slice(
+            (data.map(item => item.day).indexOf(today) - 7) < 0 ? 0 :
+            (data.map(item => item.day).indexOf(today)) - 7,
+            ((data.map(item => item.day).indexOf(today) - 7) < 0 ? 0 :
+             (data.map(item => item.day).indexOf(today)) - 7) + 7);
 
     data.map(item => item.day).indexOf(today) < 6 ? title = "روز های قبل" : title = "هفته قبل";
 

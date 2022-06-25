@@ -9,7 +9,6 @@ export const ArrowRight = () => {
     const dispatch = useDispatch();
     const state = useSelector(state => state)
     let today = getDate('numeric', 'day', 1, 'fa-IR')[0].day
-
     let data = JSON.parse(localStorage.getItem('finish'));
     data = data.slice((data.map(item => item.day).indexOf(today) + 7), (data.map(item => item.day).indexOf(today) + 14))
 

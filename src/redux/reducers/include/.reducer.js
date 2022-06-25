@@ -25,6 +25,15 @@ export function setArrowRight (state = false, action) {
     }
 }
 
+export function setFoodSuggestion (state = [], action) {
+    switch (action.type) {
+        case "FOOD_SUGGESTION" :
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export function setListFood (state = [], action) {
     switch (action.type) {
         case "GET_LIST_FOOD" :
@@ -37,6 +46,15 @@ export function setListFood (state = [], action) {
 export function setModal (state = false, action) {
     switch (action.type) {
         case "OPEN_MODAL" :
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export function setModalS (state = false, action) {
+    switch (action.type) {
+        case "OPEN_MODAL_SUGGESTION" :
             return action.payload
         default:
             return state
